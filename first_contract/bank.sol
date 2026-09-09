@@ -27,7 +27,7 @@ contract Bank {
         deposit();
     }
 
-    function deposit() public payable {
+    function deposit() public payable virtual {
         require(msg.value > 0, "Bank: deposit amount is zero");
 
         balances[msg.sender] += msg.value;
