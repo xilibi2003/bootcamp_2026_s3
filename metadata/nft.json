@@ -1,0 +1,12 @@
+{
+    "name": "Test NFT",
+    "description": "Friendly OpenSea Creature that enjoys long swims in the ocean.",
+    "image": "ipfs://bafkreiarsmxt53v3gqi4fqdtehmztfv7o5ied2zt6hhzg5swy372kvdbnm",
+    "external_url": "https://openseacreatures.io/3",
+    "attributes": [
+        {
+            "trait_type": "Base",
+            "value": "Starfish"
+        }
+    ]
+}

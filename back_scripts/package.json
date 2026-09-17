@@ -1,0 +1,19 @@
+{
+  "name": "nft-market-listener",
+  "version": "1.0.0",
+  "description": "Listen to NFTMarket NFTListed and NFTSold events using Viem",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "trade": "node trade.js",
+    "test": "node test/mock-event-test.js"
+  },
+  "keywords": ["viem", "ethereum", "nft", "listener"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "viem": "^2.23.0"
+  }
+}

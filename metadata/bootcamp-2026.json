@@ -1,0 +1,15 @@
+{
+  "name": "Bootcamp 2026 第3期",
+  "description": "Bootcamp 2026，第3期",
+  "image": "ipfs://bafkreidm4osndfz5zm6gm5tcwu7v2zxdmpbypbpyjlpqzyy3xtzzulh4eu",
+  "attributes": [
+    {
+      "trait_type": "Program",
+      "value": "Bootcamp 2026"
+    },
+    {
+      "trait_type": "Cohort",
+      "value": "第3期"
+    }
+  ]
+}

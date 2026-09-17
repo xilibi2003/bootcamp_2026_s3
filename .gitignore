@@ -1,0 +1,20 @@
+# Node dependencies & environment
+node_modules/
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Foundry project is maintained in its own standalone repository (foundry_project_26_s3)
+forge_project/
