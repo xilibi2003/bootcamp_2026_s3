@@ -6,14 +6,25 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "indexer": "node indexer.js",
     "trade": "node trade.js",
-    "test": "node test/mock-event-test.js"
+    "transfer:simulate": "node simulate_transfers.js",
+    "transfer:loop": "node simulate_transfers.js --loop",
+    "test": "node test/mock-event-test.js && node test/indexer-test.js"
   },
-  "keywords": ["viem", "ethereum", "nft", "listener"],
+  "keywords": [
+    "viem",
+    "ethereum",
+    "nft",
+    "listener"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.6",
     "dotenv": "^16.4.7",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1",
     "viem": "^2.23.0"
   }
 }

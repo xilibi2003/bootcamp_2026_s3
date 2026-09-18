@@ -13,6 +13,9 @@ export const config = {
   nftContractAddress: process.env.NFT_CONTRACT_ADDRESS || "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
   pollingInterval: Number(process.env.POLLING_INTERVAL) || 2000,
   tokenDecimals: Number(process.env.TOKEN_DECIMALS) || 18,
+  port: Number(process.env.PORT) || 3001,
+  dbPath: process.env.DB_PATH || "./data/indexer.db",
+  startBlock: BigInt(process.env.START_BLOCK || "0"),
   sellerPrivateKey: process.env.SELLER_PRIVATE_KEY || "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
   buyerPrivateKey: process.env.BUYER_PRIVATE_KEY || "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d",
 };
@@ -51,11 +54,14 @@ export const publicClient = createPublicClient({
 });
 
 /**
- * 根据私钥创建 WalletClient
- * @param {`0x${string}`} privateKey
+ * 根据私钥或 Account 对象创建 WalletClient
+ * @param {`0x${string}`|import('viem/accounts').Account} accountOrPrivateKey
  */
-export function createWallet(privateKey) {
-  const account = privateKeyToAccount(privateKey);
+export function createWallet(accountOrPrivateKey) {
+  const account =
+    typeof accountOrPrivateKey === "string"
+      ? privateKeyToAccount(accountOrPrivateKey)
+      : accountOrPrivateKey;
   return createWalletClient({
     account,
     chain: activeChain,
