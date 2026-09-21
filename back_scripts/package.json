@@ -10,7 +10,12 @@
     "trade": "node trade.js",
     "transfer:simulate": "node simulate_transfers.js",
     "transfer:loop": "node simulate_transfers.js --loop",
+    "erc20Tool": "node erc20Tool.js",
+    "test:wallet": "node test/erc20-tool-test.js",
     "test": "node test/mock-event-test.js && node test/indexer-test.js"
+  },
+  "bin": {
+    "erc20Tool": "./erc20Tool.js"
   },
   "keywords": [
     "viem",
