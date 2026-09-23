@@ -1,0 +1,61 @@
+@layer base {
+  html, body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0b1326;
+    color: #dae2fd;
+  }
+}
+
+/* Custom glowing and ambient effects */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(208, 188, 255, 0.25);
+}
+
+.glow-tertiary {
+  box-shadow: 0 0 16px rgba(78, 222, 163, 0.25);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 16px rgba(76, 215, 246, 0.25);
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060e20;
+}
+::-webkit-scrollbar-thumb {
+  background: #222a3d;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #31394d;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(23, 31, 51, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Spin animation for icons */
+.spin-animate {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
