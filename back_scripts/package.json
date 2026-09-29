@@ -12,7 +12,8 @@
     "transfer:loop": "node simulate_transfers.js --loop",
     "erc20Tool": "node erc20Tool.js",
     "test:wallet": "node test/erc20-tool-test.js",
-    "test": "node test/mock-event-test.js && node test/indexer-test.js"
+    "test": "node test/mock-event-test.js && node test/indexer-test.js",
+    "read:rnt": "node read_rnt_locks.js"
   },
   "bin": {
     "erc20Tool": "./erc20Tool.js"
